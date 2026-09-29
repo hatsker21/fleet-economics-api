@@ -527,16 +527,16 @@ GET /vehicles/12/economics?from=2026-09-01&to=2026-09-30
   * [x] Проєктування ER-моделі
   * [x] Визначення tenant isolation
   * [x] Визначення ролей та RBAC
-  * [ ] Ініціалізація SQLAlchemy
-  * [ ] Початкові Alembic migrations
+  * [x] Ініціалізація SQLAlchemy
+  * [x] Початкові Alembic migrations
 
-* [ ] **Етап 2 — Authentication & Authorization**
+* [x] **Етап 2 — Authentication & Authorization**
 
-  * [ ] User registration
-  * [ ] Password hashing
-  * [ ] JWT authentication
-  * [ ] RBAC
-  * [ ] Tenant isolation
+  * [x] User registration
+  * [x] Password hashing
+  * [x] JWT authentication
+  * [x] RBAC
+  * [x] Tenant isolation
 
 * [ ] **Етап 3 — Core CRUD**
 

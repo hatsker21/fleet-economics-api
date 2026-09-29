@@ -2,32 +2,32 @@
 📍 Етап 1: Ініціалізація та База Даних (Фундамент)
 Мета: Підняти працюючий сервер, підключити БД та налаштувати систему міграцій.
 
-[ ] Написати базовий код FastAPI (src/main.py), налаштування (src/config.py) та БД (src/database.py).
+[x] Написати базовий код FastAPI (src/main.py), налаштування (src/config.py) та БД (src/database.py).
 
-[ ] Запустити сервер та перевірити /health ендпоінт.
+[x] Запустити сервер та перевірити /health ендпоінт.
 
-[ ] Написати SQLAlchemy моделі для Company, User, Location (src/models/).
+[x] Написати SQLAlchemy моделі для Company, User, Location (src/models/).
 
-[ ] Ініціалізувати Alembic (alembic init alembic).
+[x] Ініціалізувати Alembic (alembic init alembic).
 
-[ ] Налаштувати alembic/env.py для підключення наших моделей.
+[x] Налаштувати alembic/env.py для підключення наших моделей.
 
-[ ] Згенерувати та застосувати першу міграцію (alembic revision --autogenerate, alembic upgrade head).
+[x] Згенерувати та застосувати першу міграцію (alembic revision --autogenerate, alembic upgrade head).
 
 📍 Етап 2: Реєстрація, Авторизація та RBAC (Безпека)
 Мета: Реалізувати систему користувачів з ролями та безпечним доступом.
 
-[ ] Створити Pydantic-схеми для реєстрації та логіну (src/schemas/user.py).
+[x] Створити Pydantic-схеми для реєстрації та логіну (src/schemas/user.py).
 
-[ ] Написати утиліти для хешування паролів та генерації JWT-токенів (src/api/auth_utils.py).
+[x] Написати утиліти для хешування паролів та генерації JWT-токенів (src/api/auth_utils.py).
 
-[ ] Реалізувати ендпоінт POST /auth/register (створення компанії та адміна).
+[x] Реалізувати ендпоінт POST /auth/register (створення компанії та адміна).
 
-[ ] Реалізувати ендпоінт POST /auth/login (отримання токена).
+[x] Реалізувати ендпоінт POST /auth/login (отримання токена).
 
-[ ] Написати Dependency get_current_user, яка перевіряє токен та витягує юзера з БД.
+[x] Написати Dependency get_current_user, яка перевіряє токен та витягує юзера з БД.
 
-[ ] Написати Dependency для перевірки ролей (RBAC) та ізоляції компаній (Tenant Isolation).
+[x] Написати Dependency для перевірки ролей (RBAC) та ізоляції компаній (Tenant Isolation).
 
 📍 Етап 3: Основний CRUD (Операційні дані)
 Мета: Навчити API створювати, читати, оновлювати та видаляти основні сутності.
