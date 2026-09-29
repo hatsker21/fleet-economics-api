@@ -1,0 +1,6 @@
+fastapi[standard]
+sqlalchemy
+alembic
+pydantic-settings
+passlib[bcrypt]
+python-jose[cryptography]
