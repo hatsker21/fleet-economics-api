@@ -152,7 +152,7 @@ Company-owned data
 
 ## Entity Relationship Diagram
 
-![ER Diagram](docs/image_f22d35.png)
+!![ER Діаграма бази даних](docs/er_diagram.png)
 
 ### Основні сутності
 
@@ -540,7 +540,7 @@ GET /vehicles/12/economics?from=2026-09-01&to=2026-09-30
 
 * [ ] **Етап 3 — Core CRUD**
 
-  * [ ] Vehicles CRUD
+  * [x] Vehicles CRUD
   * [ ] Trips CRUD
   * [ ] Maintenance Logs CRUD
   * [ ] Locations
