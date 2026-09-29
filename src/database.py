@@ -1,5 +1,5 @@
 from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import sessionmaker
 from src.config import settings
 
 # Підключення до бази (check_same_thread тільки для SQLite)
@@ -9,8 +9,8 @@ engine = create_engine(
 )
 
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
-Base = declarative_base()
 
+# Dependency для FastAPI
 def get_db():
     db = SessionLocal()
     try:
