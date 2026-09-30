@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="docs/logo.png" alt="B2B Fleet Economics API Logo" width="600">
+  <img src="docs/logo.png" alt="B2B Fleet Economics API Logo" width="800">
 </p>
+
 # 🚚 B2B Fleet Economics API
 
 > **REST API для управління автопарком мікроперевізників, обліку рейсів і витрат та розрахунку реальної юніт-економіки транспортних операцій.**
