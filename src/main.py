@@ -1,18 +1,17 @@
 from fastapi import FastAPI
-from src.api import auth
-from src.api import auth, vehicles
-from src.api import auth, vehicles, trips
+from src.api import auth, vehicles, trips, fuel_logs, maintenance_logs
 
 app = FastAPI(
     title="B2B Fleet Economics API",
-    description="API для управління автопарком та розрахунку економіки.",
+    description="API для управління автопарком мікроперевізників та розрахунку економіки.",
     version="1.0.0"
 )
 
-# Підключаємо роутер авторизації до головного додатку
 app.include_router(auth.router)
 app.include_router(vehicles.router)
 app.include_router(trips.router)
+app.include_router(fuel_logs.router)
+app.include_router(maintenance_logs.router)
 
 @app.get("/health", tags=["System"])
 def health_check():

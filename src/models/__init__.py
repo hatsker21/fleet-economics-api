@@ -4,3 +4,5 @@ from src.models.user import User
 from src.models.location import Location
 from src.models.vehicle import Vehicle
 from src.models.trip import Trip
+from src.models.fuel_log import FuelLog
+from src.models.maintenance_log import MaintenanceLog
