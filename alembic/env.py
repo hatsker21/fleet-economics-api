@@ -24,6 +24,7 @@ from src.models.company import Company
 from src.models.user import User
 from src.models.location import Location
 from src.models.vehicle import Vehicle
+from src.models.trip import Trip
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.

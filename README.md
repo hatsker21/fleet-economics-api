@@ -541,7 +541,7 @@ GET /vehicles/12/economics?from=2026-09-01&to=2026-09-30
 * [ ] **Етап 3 — Core CRUD**
 
   * [x] Vehicles CRUD
-  * [ ] Trips CRUD
+  * [x] Trips CRUD
   * [ ] Maintenance Logs CRUD
   * [ ] Locations
 
