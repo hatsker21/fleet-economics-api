@@ -1,3 +1,6 @@
+<p align="center">
+  <img src="docs/logo.png" alt="B2B Fleet Economics API Logo" width="600">
+</p>
 # 🚚 B2B Fleet Economics API
 
 > **REST API для управління автопарком мікроперевізників, обліку рейсів і витрат та розрахунку реальної юніт-економіки транспортних операцій.**
@@ -542,8 +545,8 @@ GET /vehicles/12/economics?from=2026-09-01&to=2026-09-30
 
   * [x] Vehicles CRUD
   * [x] Trips CRUD
-  * [ ] Maintenance Logs CRUD
-  * [ ] Locations
+  * [x] Maintenance Logs CRUD
+  * [x] Locations
 
 * [ ] **Етап 4 — Fuel & Query Features**
 
@@ -554,7 +557,7 @@ GET /vehicles/12/economics?from=2026-09-01&to=2026-09-30
 
 * [ ] **Етап 5 — Economics Engine**
 
-  * [ ] `EconomicsService`
+  * [ ] EconomicsService
   * [ ] Cost per km
   * [ ] Profit per km
   * [ ] Depreciation
