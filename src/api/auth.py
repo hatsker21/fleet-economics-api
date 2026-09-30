@@ -24,10 +24,9 @@ def register_company_and_admin(request: UserRegisterRequest, db: Session = Depen
     # 2. Створюємо компанію (Tenant)
     new_company = Company(name=request.company_name)
     db.add(new_company)
-    db.commit()
-    db.refresh(new_company) # Отримуємо згенерований id компанії з бази
+    db.flush()  # Замість commit(). Отримуємо ID, але транзакція ще відкрита
 
-    # 3. Створюємо першого користувача (Адміністратора)
+    # 3. Створюємо першого користувача
     new_user = User(
         email=request.email,
         hashed_password=get_password_hash(request.password),
@@ -35,7 +34,7 @@ def register_company_and_admin(request: UserRegisterRequest, db: Session = Depen
         role=UserRole.ADMIN
     )
     db.add(new_user)
-    db.commit()
+    db.commit()  # Фіксуємо компанію і юзера разом!
     db.refresh(new_user)
 
     # Повертаємо дані користувача (Pydantic сам приховає пароль завдяки UserResponse)

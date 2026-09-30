@@ -7,6 +7,8 @@ from src.models.user import User
 from src.models.vehicle import Vehicle
 from src.schemas.vehicle import VehicleCreate, VehicleResponse
 from src.api.dependencies import get_current_user
+from src.api.dependencies import get_current_user, require_roles
+from src.models.user import UserRole
 
 router = APIRouter(prefix="/vehicles", tags=["Vehicles"])
 
@@ -14,7 +16,8 @@ router = APIRouter(prefix="/vehicles", tags=["Vehicles"])
 def create_vehicle(
     vehicle_in: VehicleCreate,
     db: Session = Depends(get_db),
-    current_user: User = Depends(get_current_user)
+    # Тільки Адмін та Диспетчер можуть створювати авто
+    current_user: User = Depends(require_roles([UserRole.ADMIN, UserRole.DISPATCHER])) 
 ):
     # Перевіряємо, чи немає вже авто з таким номером (навіть в інших компаніях)
     existing_vehicle = db.query(Vehicle).filter(Vehicle.license_plate == vehicle_in.license_plate).first()
